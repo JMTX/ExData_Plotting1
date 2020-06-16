@@ -27,7 +27,11 @@ data_1 <- read.csv.sql(file="household_power_consumption.txt",sep=";",
 png(filename = "plot1.png", width = 480, height = 480,
     pointsize = 12, bg = "white",  res = NA)
 #write the histogram in "plot1.png"
-hist(data_1$Global_active_power,col="orangered",main="Global Active Power",
-     xlab="Global Active Power (kilowatts)")#col="firebrick1")
+#hist(data_1$Global_active_power,col="orangered",main="Global Active Power",
+#     xlab="Global Active Power (kilowatts)")#col="firebrick1")
+
+hist(data_1$Global_active_power,col=rgb(255,37,0,max=255),main="Global Active Power",
+     xlab="Global Active Power (kilowatts)")
+
 #close png device
 dev.off()
